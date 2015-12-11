@@ -2,15 +2,22 @@
 
 #instance methods and variables
 class Robot
-	#has a type
-	#can puts it type
+	attr_accessor :type
+
+	def my_type
+		puts "my type is #{@type}"
+	end
+
+	def self.three_laws
+		puts "Don't harm humans."
+		puts "blah blah blah"
+		puts "Protect yourself."
+	end
+
+
 end
 
-#Now add a class method, using Robot
 
-#new keyword: self
-#self refers to the class inside a class definition
-#self refers to an instance inside a method definition
 
 #Demonstrate using class method
 #You can't use a class method on an instance (or an instance method on a class)

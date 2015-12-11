@@ -4,7 +4,12 @@
 
 # Create an employee class.
 class Employee
-	#with first name & last name
+	attr_accessor :first_name, :last_name
+	@@num_employees = 0
+	def self.num_employees
+		@@num_employees
+	end
+
 
 	#create a class variable that counts how many employees have been created
 	#call it num_employees
@@ -13,15 +18,17 @@ class Employee
 	#name it get_num_employees
 
 	def initialize (first_name, last_name)
-		
+		@@num_employees += 1
+		@first_name = first_name
+		@last_name = last_name
 	end
 
 	def full_name()
-	   #return a string
+	   "#{@first_name} #{@last_name}"
 	end
 
 	def contact()
-		"Yell my name really loud: #{full_name()}"
+		puts "Yell my name really loud: #{self.full_name()}"
 	end
 
 end
